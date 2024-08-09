@@ -24,6 +24,7 @@
                 </div>
                 <p class="fs-6 mt-3 fw-light">
                     {{ $comment->content }}
+                    
                 </p>
             </div>
         </div>
