@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\UserController;
 use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
 
@@ -46,5 +47,7 @@ Route::get('/terms',function(){
     return view ('terms');
 });
 
+// profile Route
+Route::get('/profile', [UserController::class, 'show'])->middleware('auth');
 
 
